@@ -161,7 +161,7 @@ nslookup google.com
 <details><summary> What Unix/Linux commands will alter a files ownership, files permissions?
 </summary><p>
 
-`chown user:group` - alters ownership
+`chown USER:GROUP` - alters ownership
 
 `chmod xxx` - alters permissions, where xxx is:
 
@@ -203,25 +203,188 @@ permission would be re-applied on all files inside the folder. By default files 
 ```bash
 useradd -r USERNAME
 ```
-Other way is to set default shell to `/usr/sbin/nologin` for the user in `/etc/passwd` file. 
+Other way is to set default shell to `/usr/sbin/nologin` for the user in `/etc/passwd` file after regular process.
 </p></details>
 
 <details><summary> How to add/remove a group from a user?
+</summary><p>
+
+```bash
+gpasswd -a USER GROUP
+gpasswd -d USER GROUP
+```
+First command for 'add' and later for 'remove'.
+</p></details>
+
 <details><summary> What is a bash alias?
+</summary><p>
+
+An bash alias is nothing but the shortcut to commands. Read more [here](https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html).
+</p></details>
+
 <details><summary> How do you set the mail address of the root/a user?
+</summary><p>
+
+One will need to edit or create file `/etc/aliases` to add the email next to the user.
+
+Example of '/etc/aliases':
+```vi
+# See man 5 aliases for format
+postmaster:    root
+
+root: user@youremaildomain.com
+```
+</p></details>
+
 <details><summary> What does CTRL-c do?
+</summary><p>
+
+Cancels running task in shell.
+</p></details>
+
 <details><summary> What does CTRL-d do?
+</summary><p>
+
+Exits from terminal. Closes TTY/SSH session.
+</p></details>
+
 <details><summary> What does CTRL-z do?
+</summary><p>
+
+Pauses running task. To proceed in foreground type `fg` and `bg` for background. However even in background the task 
+will be bind to current terminal.  
+</p></details>
+
 <details><summary> What is in /etc/services?
+</summary><p>
+
+Well-known ports used by services and\or registered by IANA. Read more [here](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
+</p></details>
+
 <details><summary> How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
+</summary><p>
+
+`>` - write to a file
+
+`>>` - append to an existing file
+
+`1>filename` - STDOUT
+
+`2>filename` - STDERR
+
+`&>filename` - both STDOUT and STDERR
+
+`&>/dev/null` - make all OUTPUT silent
+</p></details>
+
 <details><summary> What is the difference between UNIX and Linux.
+</summary><p>
+
+Unix is proprietary, multitasking, multiuser computer operating systems that derive from the original AT&T Unix, 
+developed in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie. 
+
+Linux is nothing but a UNIX clone which is written Linus Torvalds from scratch with the help of some hackers across the globe.
+
+More info in the article - 
+[Unix Vs Linux: Learn what is the Core Difference between UNIX and Linux Architecture, Kernel And Commands](https://www.softwaretestinghelp.com/unix-vs-linux/).
+</p></details>
+
 <details><summary> What is the difference between Telnet and SSH?
+</summary>><p>
+
+Telnet is an application protocol used on the Internet or local area network to provide a bidirectional interactive 
+text-oriented communication facility using a virtual terminal connection. Sends messages as plain text. Operates on 23/tcp.
+Read more on [Wikipedia](https://en.wikipedia.org/wiki/Telnet).
+
+Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network.
+Typical applications include remote command-line, login, and remote command execution, but any network service can be secured with SSH.
+Read more on [Wikipedia](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)).
+</p></details>
+
 <details><summary> Explain the three load averages and what do they indicate. What command can be used to view the load averages?
+</summary><p>
+
+`uptime` is the best way to view load average. It is also useful to get number of CPU's with `nproc` for better understanding 
+of results. 
+
+Example: `load average: 1,81, 0,77, 0,57`. 
+
+* **1,81** - is the usage over **last minute**. If we assume that the result is for one core system - this means that last
+minute our CPU was busy, and approximately twice as much load is waiting to be processed. I run 8 CPU's computer, so it basically
+means that over last minute each CPU on my system was busy only 22,6 percent of the given time.
+* **0,77** - usage over **last 5 minutes**. For one CPU system means that, 23 percent of time computer was idle or 1 minute and 9 seconds
+was doing nothing. 
+* **0,57** - average usage over **last 15 minutes**. One-CPU computer was idle 6 minutes and 27 seconds or 43% of time.   
+</p></details>
+
 <details><summary> Can you name a lower-case letter that is not a valid option for GNU ```ls```?
+</summary><p>
+
+```bash
+ls -y
+___
+ls: invalid option -- 'y'
+Try 'ls --help' for more information.
+```
+</p></details>
+
 <details><summary> What is a Linux kernel module?
+</summary><p>
+
+Modules are pieces of code written in C that can be loaded and unloaded into the kernel upon demand. 
+They extend the functionality of the kernel without the need to reboot the system. 
+For example, one type of module is the device driver, which allows the kernel to access hardware connected to the system. 
+Without modules, we would have to build monolithic kernels and add new functionality directly into the kernel image. 
+Besides having larger kernels, this has the disadvantage of requiring us to rebuild and reboot the kernel every time we want new functionality.
+Read more [here](https://linux.die.net/lkmpg/x40.html).
+</p></details>
+
 <details><summary> Walk me through the steps in booting into single user mode to troubleshoot a problem.
+</summary><p>
+
+[Runlevel](https://en.wikipedia.org/wiki/Runlevel) - is a mode of operation in the computer operating systems that 
+implement Unix System V-style initialization.
+
+| level | name | description |
+|-------|-----------------------|-------------|
+| 0 | halt | Shuts down the system |
+| 1 | single-user mode | Mode for administrative tasks |
+| 2 | multi-user mode | Does not configure network interfaces and does not export networks services |
+| 3 | multi-user mode with networking | Starts the system normally |
+| 4 | not-used | Reserved for special purposes |
+| 5 | display-mode | Same as level 3, but with display manager |
+| 6 | reboot | Reboots the system | 
+
+Troubleshooting guide: 
+* reboot and hold 'Shift' to bring up GRUB menu
+* select GRUB menu entry and press 'e' to edit
+* locate the line containing `ro  quiet splash` and add `single` to that line
+* press 'Ctrl-x' or 'F10' to proceed. 
+</p></details>
+
 <details><summary> Walk me through the steps you'd take to troubleshoot a 404 error on a web application you administer.
+</summary><p>
+
+The HTTP error 404, or more commonly called "404 error", means that the page you are trying to open could not be found on the server.
+I would go bottom from the top using OSI model:
+* application (where error happens)
+* presentation (other browser, other page)
+* session (DNS queries)
+* transport
+* network
+* data link
+* physical
+</p></details>
+
 <details><summary> What is ICMP protocol? Why do you need to use?
+</summary>
+<p>
+
+Internet Control Message Protocol is located at the Network layer of the OSI model and is an integral part of the 
+Internet Protocol suite (TCP/IP). ICMP is assigned Protocol Number 1 in the IP suite according to 
+[IANA.org](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xml). Designed to act as an error reporting
+and query service, it plays a crucial role in the host-to-host datagram service in network communication.
+</p></details>
 
 #### [[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
 
