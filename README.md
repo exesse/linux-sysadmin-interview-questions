@@ -290,7 +290,7 @@ More info in the article -
 </p></details>
 
 <details><summary> What is the difference between Telnet and SSH?
-</summary>><p>
+</summary><p>
 
 Telnet is an application protocol used on the Internet or local area network to provide a bidirectional interactive 
 text-oriented communication facility using a virtual terminal connection. Sends messages as plain text. Operates on 23/tcp.
