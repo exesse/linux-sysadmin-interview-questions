@@ -113,6 +113,7 @@ Read more on [Wikipedia](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)).
 ```bash
 set
 ```
+Enviroment variables could be called from scripts, apps or from shell directly as `$VARIABLE_NAME`.
 </p></details>
 
 <details><summary> I get "command not found" when I run ```ifconfig -a```. What can be wrong?
@@ -128,7 +129,33 @@ Package `net-tools` is not installed.
 </p></details>
 
 <details><summary> What command will show the available disk space on the Unix/Linux system?
+</summary><p>
+
+Space usage on partitions in human-readable format:
+```bash
+df -h
+```
+
+Inode usage on partitions:
+```bash
+df -h
+```
+
+Disk space usage:
+```bash
+lsblk
+```
+</p>
 <details><summary> What commands do you know that can be used to check DNS records?
+</summary><p>
+
+```bash
+dig google.com AAAA
+
+# Or for A record simply:
+nslookup google.com
+```
+</p></details>
 <details><summary> What Unix/Linux commands will alter a files ownership, files permissions?
 <details><summary> What does ```chmod +x FILENAME``` do?
 <details><summary> What does the permission 0750 on a file mean?
