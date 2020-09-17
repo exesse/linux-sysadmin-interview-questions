@@ -141,11 +141,12 @@ Inode usage on partitions:
 df -h
 ```
 
-Disk space usage:
+Disks space usage:
 ```bash
 lsblk
 ```
-</p>
+</p></details>
+
 <details><summary> What commands do you know that can be used to check DNS records?
 </summary><p>
 
@@ -156,11 +157,55 @@ dig google.com AAAA
 nslookup google.com
 ```
 </p></details>
+
 <details><summary> What Unix/Linux commands will alter a files ownership, files permissions?
+</summary><p>
+
+`chown user:group` - alters ownership
+
+`chmod xxx` - alters permissions, where xxx is:
+
+| # | permission              | rwx | binary |
+|---|-------------------------|-----|--------|
+| 7 | read, write and execute | rwx | 111    |
+| 6 | read and write          | rw- | 110    |
+| 5 | read and execute        | r-x | 101    |
+| 4 | read only               | r-- | 100    |
+| 3 | write and execute       | -wx | 011    |
+| 2 | write only              | -w- | 010    |
+| 1 | execute only            | --x | 001    |
+| 0 | none                    | --- | 000    |
+
+</p></details>
+
 <details><summary> What does ```chmod +x FILENAME``` do?
+</summary><p>
+
+Will make `FILENAME` executable.
+</p></details>
+
 <details><summary> What does the permission 0750 on a file mean?
+</summary><p>
+
+Sets `-rwxr-x---` permission which means that user has `read, write and execute`, group only `read and execute` 
+and others has access at all. Chmod online calculator could be found [here](https://chmodcommand.com/).
+</p></details>
+
 <details><summary> What does the permission 0750 on a directory mean?
+</summary><p>
+Generally speaking exactly the same as previous question, but on the directory scope. When used with flag `-r` same 
+permission would be re-applied on all files inside the folder. By default files will have separate permissions. 
+</p></details>
+
 <details><summary> How to add a new system user without login permissions?
+</summary><p>
+
+```bash
+useradd -r USERNAME
+```
+Other way is to set default shell to `/usr/sbin/nologin` for the user in `/etc/passwd` file. 
+</p></details>
+
 <details><summary> How to add/remove a group from a user?
 <details><summary> What is a bash alias?
 <details><summary> How do you set the mail address of the root/a user?
