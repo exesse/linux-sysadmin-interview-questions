@@ -87,7 +87,7 @@ vmstat -s | grep 'used memory'
 vmstat -s | grep 'free memory'
 ```
 Of course - do you think /proc/meminfo is lying to you?
-</p>
+</p></details>
 
 <details><summary> How to search for the string "my konfu is the best" in files of a directory recursively?
 </summary><p>
@@ -104,12 +104,29 @@ grep -r "my konfu is the best" .
 
 Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network.
 Typical applications include remote command-line, login, and remote command execution, but any network service can be secured with SSH.
-[[https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)][Wikipedia]]
+Read more on [Wikipedia](https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)).
 </p></details>
 
 <details><summary> How to get all environment variables and how can you use them?
+</summary><p>
+
+```bash
+set
+```
+</p></details>
+
 <details><summary> I get "command not found" when I run ```ifconfig -a```. What can be wrong?
+</summary><p>
+
+Package `net-tools` is not installed. 
+</p></details>
+
 <details><summary> What happens if I type TAB-TAB?
+</summary><p>
+
+`command not found` will be returned. 
+</p></details>
+
 <details><summary> What command will show the available disk space on the Unix/Linux system?
 <details><summary> What commands do you know that can be used to check DNS records?
 <details><summary> What Unix/Linux commands will alter a files ownership, files permissions?
@@ -333,6 +350,3 @@ Some questions are 'borrowed' from other great references like:
 * https://github.com/darcyclarke/Front-end-Developer-Interview-Questions
 * https://github.com/kylejohnson/linux-sysadmin-interview-questions/blob/master/test.md
 * http://slideshare.net/kavyasri790693/linux-admin-interview-questions
-
-
-[]: https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)
