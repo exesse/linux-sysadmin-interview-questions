@@ -55,43 +55,83 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 #### [[⬆]](#toc) <a name='simple'>Simple Linux Questions:</a>
 
-<details><summary>What is the name and the UID of the administrator user?</summary>
-<p>
-UID 0, name root, wheel or could be even custom.
+<details><summary>What is the name and the UID of the administrator user?
+</summary><p>
+
+UID 0, name root, wheel or could be even renamed.
 </p>
 </details>
 
-* How to list all files, including hidden ones, in a directory?
-* What is the Unix/Linux command to remove a directory and its contents?
-* Which command will show you free/used memory? Does free memory exist on Linux?
-* How to search for the string "my konfu is the best" in files of a directory recursively?
-* How to connect to a remote server or what is SSH?
-* How to get all environment variables and how can you use them?
-* I get "command not found" when I run ```ifconfig -a```. What can be wrong?
-* What happens if I type TAB-TAB?
-* What command will show the available disk space on the Unix/Linux system?
-* What commands do you know that can be used to check DNS records?
-* What Unix/Linux commands will alter a files ownership, files permissions?
-* What does ```chmod +x FILENAME``` do?
-* What does the permission 0750 on a file mean?
-* What does the permission 0750 on a directory mean?
-* How to add a new system user without login permissions?
-* How to add/remove a group from a user?
-* What is a bash alias?
-* How do you set the mail address of the root/a user?
-* What does CTRL-c do?
-* What does CTRL-d do?
-* What does CTRL-z do?
-* What is in /etc/services?
-* How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
-* What is the difference between UNIX and Linux.
-* What is the difference between Telnet and SSH?
-* Explain the three load averages and what do they indicate. What command can be used to view the load averages?
-* Can you name a lower-case letter that is not a valid option for GNU ```ls```?
-* What is a Linux kernel module?
-* Walk me through the steps in booting into single user mode to troubleshoot a problem.
-* Walk me through the steps you'd take to troubleshoot a 404 error on a web application you administer.
-* What is ICMP protocol? Why do you need to use?
+<details><summary>How to list all files, including hidden ones, in a directory?
+</summary><p>
+
+```bash
+ls -la
+```
+</p></details>
+
+<details><summary> What is the Unix/Linux command to remove a directory and its contents?
+</summary><p>
+
+```bash
+rm -rf
+```
+</p></details>
+
+<details><summary> Which command will show you free/used memory? Does free memory exist on Linux?
+</summary><p>
+
+```bash
+cat /proc/meminfo
+vmstat -s | grep 'used memory'
+vmstat -s | grep 'free memory'
+```
+Of course - do you think /proc/meminfo is lying to you?
+</p>
+
+<details><summary> How to search for the string "my konfu is the best" in files of a directory recursively?
+</summary><p>
+
+```bash
+grep -r "my konfu is the best" .
+```
+</p>
+
+<details><summary> How to connect to a remote server or what is SSH?
+</summary><p>
+
+```ssh username@remote_host -p <custom port>```
+
+Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network.
+Typical applications include remote command-line, login, and remote command execution, but any network service can be secured with SSH.
+[[https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)][Wikipedia]]
+</p>
+<details><summary> How to get all environment variables and how can you use them?
+<details><summary> I get "command not found" when I run ```ifconfig -a```. What can be wrong?
+<details><summary> What happens if I type TAB-TAB?
+<details><summary> What command will show the available disk space on the Unix/Linux system?
+<details><summary> What commands do you know that can be used to check DNS records?
+<details><summary> What Unix/Linux commands will alter a files ownership, files permissions?
+<details><summary> What does ```chmod +x FILENAME``` do?
+<details><summary> What does the permission 0750 on a file mean?
+<details><summary> What does the permission 0750 on a directory mean?
+<details><summary> How to add a new system user without login permissions?
+<details><summary> How to add/remove a group from a user?
+<details><summary> What is a bash alias?
+<details><summary> How do you set the mail address of the root/a user?
+<details><summary> What does CTRL-c do?
+<details><summary> What does CTRL-d do?
+<details><summary> What does CTRL-z do?
+<details><summary> What is in /etc/services?
+<details><summary> How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
+<details><summary> What is the difference between UNIX and Linux.
+<details><summary> What is the difference between Telnet and SSH?
+<details><summary> Explain the three load averages and what do they indicate. What command can be used to view the load averages?
+<details><summary> Can you name a lower-case letter that is not a valid option for GNU ```ls```?
+<details><summary> What is a Linux kernel module?
+<details><summary> Walk me through the steps in booting into single user mode to troubleshoot a problem.
+<details><summary> Walk me through the steps you'd take to troubleshoot a 404 error on a web application you administer.
+<details><summary> What is ICMP protocol? Why do you need to use?
 
 #### [[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
 
@@ -292,3 +332,6 @@ Some questions are 'borrowed' from other great references like:
 * https://github.com/darcyclarke/Front-end-Developer-Interview-Questions
 * https://github.com/kylejohnson/linux-sysadmin-interview-questions/blob/master/test.md
 * http://slideshare.net/kavyasri790693/linux-admin-interview-questions
+
+
+[]: https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)
