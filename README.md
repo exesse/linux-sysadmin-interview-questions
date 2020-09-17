@@ -95,7 +95,7 @@ Of course - do you think /proc/meminfo is lying to you?
 ```bash
 grep -r "my konfu is the best" .
 ```
-</p>
+</p></details>
 
 <details><summary> How to connect to a remote server or what is SSH?
 </summary><p>
@@ -105,7 +105,8 @@ grep -r "my konfu is the best" .
 Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network.
 Typical applications include remote command-line, login, and remote command execution, but any network service can be secured with SSH.
 [[https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)][Wikipedia]]
-</p>
+</p></details>
+
 <details><summary> How to get all environment variables and how can you use them?
 <details><summary> I get "command not found" when I run ```ifconfig -a```. What can be wrong?
 <details><summary> What happens if I type TAB-TAB?
