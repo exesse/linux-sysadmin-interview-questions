@@ -391,43 +391,53 @@ and query service, it plays a crucial role in the host-to-host datagram service 
 <details><summary>What do the following commands do and how would you use them?</summary>
 <p>
 
-* ```tee```
+* ```tee``` - redirects output to a file
 
-* ```awk```
+* ```awk``` - pattern scanning and text processing language
 
-* ```tr```
+* ```tr``` - translates or deletes characters
 
-* ```cut```
+* ```cut``` - removes section from each line of the files
 
-* ```tac```
+* ```tac``` - tac - concatenate and print files in reverse
 
-* ```curl```
+* ```curl``` - transfers urls. CLI for REST
 
-* ```wget```
+* ```wget``` - downloads files
 
-* ```watch```
+* ```watch``` - starts the command and checks output at a given increments
 
-* ```head```
+* ```head``` - outputs the first part of the file
 
-* ```tail```
+* ```tail``` - outputs the last part of the file
 
-* ```less```
+* ```less``` - opposite of more
 
-* ```cat```
+* ```cat``` - prints content of the file
 
-* ```touch```
+* ```touch``` - creates or modifies files metadata
 
-* ```sar```
+* ```sar``` - process monitoring tool. sar -n TCP 5 12 - will monitor all TCP connections every 5 seconds during next minute
 
-* ```netstat```
+* ```netstat``` - lists active internet connections
 
-* ```tcpdump```
+* ```tcpdump``` - start packet sniffer
 
-* ```lsof```
+* ```lsof``` - lists open files, sockets, ports
 
 </p></details>
-* What does an ```&``` after a command do?
-* What does ```& disown``` after a command do?
+
+<details><summary>What does an ```&``` after a command do?</summary>
+<p>
+Starts a program in the background.
+</p></details>
+
+<details><summary>What does ```& disown``` after a command do?</summary>
+<p>
+Starts a programm in background and unbinds it from current terminal
+</p></details>
+
+
 * What is a packet filter and how does it work?
 * What is Virtual Memory?
 * What is swap and what is it used for?
