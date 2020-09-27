@@ -390,23 +390,41 @@ and query service, it plays a crucial role in the host-to-host datagram service 
 
 <details><summary>What do the following commands do and how would you use them?</summary>
 <p>
+
 * ```tee```
+
 * ```awk```
+
 * ```tr```
+
 * ```cut```
+
 * ```tac```
+
 * ```curl```
+
 * ```wget```
+
 * ```watch```
+
 * ```head```
+
 * ```tail```
+
 * ```less```
+
 * ```cat```
+
 * ```touch```
+
 * ```sar```
+
 * ```netstat```
+
 * ```tcpdump```
+
 * ```lsof```
+
 </p></details>
 * What does an ```&``` after a command do?
 * What does ```& disown``` after a command do?
