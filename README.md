@@ -388,24 +388,26 @@ and query service, it plays a crucial role in the host-to-host datagram service 
 
 #### [[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
 
-* What do the following commands do and how would you use them?
- * ```tee```
- * ```awk```
- * ```tr```
- * ```cut```
- * ```tac```
- * ```curl```
- * ```wget```
- * ```watch```
- * ```head```
- * ```tail```
- * ```less```
- * ```cat```
- * ```touch```
- * ```sar```
- * ```netstat```
- * ```tcpdump```
- * ```lsof```
+<details><summary>What do the following commands do and how would you use them?</summary>
+<p>
+* ```tee```
+* ```awk```
+* ```tr```
+* ```cut```
+* ```tac```
+* ```curl```
+* ```wget```
+* ```watch```
+* ```head```
+* ```tail```
+* ```less```
+* ```cat```
+* ```touch```
+* ```sar```
+* ```netstat```
+* ```tcpdump```
+* ```lsof```
+</p><details>
 * What does an ```&``` after a command do?
 * What does ```& disown``` after a command do?
 * What is a packet filter and how does it work?
