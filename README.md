@@ -407,7 +407,7 @@ and query service, it plays a crucial role in the host-to-host datagram service 
 * ```netstat```
 * ```tcpdump```
 * ```lsof```
-</p><details>
+</p></details>
 * What does an ```&``` after a command do?
 * What does ```& disown``` after a command do?
 * What is a packet filter and how does it work?
